@@ -9,7 +9,8 @@ import {
 } from "../../Controllers/";
 import Modal from "react-modal";
 import { Cards } from "../../components";
-import useRovingFocus from "../../Hooks/UseRoveFocus";
+
+//import useRovingFocus from "../../Hooks/UseRoveFocus";
 
 export const Giornate = () => {
   Modal.setAppElement("#root");
@@ -18,7 +19,7 @@ export const Giornate = () => {
   const [ChoosenSeason, setChoosenSeason] = useState([]);
   const [AllSeason, setAllSeason] = useState([]);
   const [SeasonListModal, setSeasonListModal] = useState(false);
-  const [focus, setFocus] = useRovingFocus(ChoosenSeason.length);
+  //const [focus, setFocus] = useRovingFocus(ChoosenSeason.length);
 
   useEffect(() => {
     fetchCurrentRoundForALeague().then(res => {
@@ -101,8 +102,8 @@ export const Giornate = () => {
             <Cards
               key={index}
               index={index}
-              setFocus={setFocus}
-              focus={focus === index}
+              // setFocus={setFocus}
+              // focus={focus === index}
               giornata={item}
             />
           );
