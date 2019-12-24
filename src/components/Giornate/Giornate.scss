@@ -1,0 +1,89 @@
+@import '../../Kaios_style.scss';
+
+.giornateMain {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 10px;
+  box-sizing: border-box;
+
+  .pickedGiornata {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 10px 0;
+
+    .giornata {
+      display: flex;
+      flex-direction: row;
+      margin-right: 10px;
+
+      h2{
+        margin-left: 5px;
+        color: $primaryColor;
+      }
+    }
+
+    .btnPickSeason {
+      padding: 10px;
+      background: white;
+      border: 0;
+      border-radius: 5px;
+      color: $basicText;
+      box-shadow: 0px 5px 5px -4px rgba(0,0,0,0.11);
+      &:focus {
+        color: $white;
+        background: $primaryColor;
+      }
+      &:hover {
+        cursor: pointer;
+        color: $white;
+        background: $primaryColor;
+      }
+    }
+  }
+}
+
+.btnSeasonList {
+  display: grid;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  height: 60px;
+  margin: 0;
+  color: #323232;
+
+  &:focus {
+    color: $white;
+    background: $primaryColor;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: $white;
+    background: $primaryColor;
+  }
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  .btnBack {
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    color: $white;
+    background: $midColor;
+    &:focus {
+      background: $primaryColor;
+    }
+    &:hover {
+      cursor: pointer;
+      background: $primaryColor;
+    }
+  }
+}

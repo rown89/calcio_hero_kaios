@@ -1,0 +1,71 @@
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+// Colors Style
+$greyScale: #FFFFFF;
+$primaryColor: #82C51A;
+$midColor: #4F9A0D;
+$darkColor: #143A06;
+$basicText: #323232;
+$white: #FFFFFF;
+
+// Fonts Style
+h1 {
+  font-size: 17px;
+  font-weight: 300;
+  margin: 0;
+}
+h2 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0;
+}
+h3 {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+}
+h4 {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+}
+h5 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+p.PRI {
+  font-size: 17px;
+  font-weight: 400;
+  margin: 0;
+}
+p.SEC {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+}
+p.THI {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+}
+p.ul {
+  font-size: 17px;
+  font-weight: 400;
+  margin: 0;
+}
+p.link {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0;
+}
+p.btn {
+  font-size: 17px;
+  font-weight: 400;
+  margin: 0;
+}

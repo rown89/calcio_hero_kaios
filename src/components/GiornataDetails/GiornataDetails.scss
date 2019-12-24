@@ -1,0 +1,10 @@
+@import '../../Kaios_style.scss';
+
+.giornataDetailMain {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: white;
+}

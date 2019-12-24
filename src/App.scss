@@ -1,0 +1,50 @@
+@import './Kaios_style.scss';
+
+.App {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 200;
+  color: #FFFFFF;
+  padding: 0 10px 0 10px;
+  background: $primaryColor;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0 10px 0;
+
+  .img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+}
+
+.league {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  color: #323232;
+  border-top: solid $midColor;
+  background: $greyScale;
+
+  .logo {
+    width: 30px;
+    height: 30px;
+  }
+}
