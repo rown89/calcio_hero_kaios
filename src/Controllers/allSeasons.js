@@ -8,10 +8,9 @@ export const fetchAllSeasons = async function() {
       { headers }
     );
     const body = await response;
-    console.log(body)
     return body;
   } catch (error) {
-    console.log("fetchAlllSeasons Error! \n", error);
+    console.log("fetchAllSeasons Error! \n", error);
     return error;
   }
 };

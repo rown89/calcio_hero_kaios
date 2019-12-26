@@ -1,28 +1,19 @@
-import React, { useEffect, useRef, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import { withFocus } from 'react-keyboard-navigation';
 import { useHistory } from 'react-router-dom';
 import './Cards.scss';
 
-export const Cards = ({ giornata, index, setFocus, focus }) => {
+export const Cards = ({ giornata, id }) => {
   let history = useHistory();
-  const ref = useRef(null);
-
-  useEffect(() => {
-    if (focus) {
-      // Move element into view when it is focused
-      ref.current.focus();
-    }
-  }, [focus]);
 
   const handleSelect = useCallback((fixture_id) => {
     history.push("/giornata-details/" + fixture_id);
-    // setting focus to that element when it is selected
-    setFocus(index);
-  }, [giornata, index, setFocus]);
+  }, [giornata]);
+
   const CardsWithFocus = withFocus(
     ({ forwardedRef, ...props }) => {
       return (
-        <div ref={forwardedRef} {...props} className="card" key={index.index} onClick={() => handleSelect(giornata.fixture_id)} onKeyPress={() => handleSelect(giornata.fixture_id)}>
+        <div ref={forwardedRef} {...props} className="card" onClick={() => handleSelect(giornata.fixture_id)} onKeyPress={() => handleSelect(giornata.fixture_id)}>
           <div className="squad">
             <div className="clubname">
               <img src={giornata.homeTeam.logo} alt="" className="logo"></img>
@@ -44,5 +35,6 @@ export const Cards = ({ giornata, index, setFocus, focus }) => {
         </div>
       );
     });
-  return <CardsWithFocus id="input" position={0} defaultActive />
+
+  return <CardsWithFocus id={'card-' + id} />
 };

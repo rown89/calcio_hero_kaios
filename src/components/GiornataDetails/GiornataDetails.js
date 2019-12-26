@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
@@ -7,12 +7,11 @@ import "./GiornataDetails.scss";
 
 export const GiornataDetails = () => {
   let { id } = useParams();
-  const [loader, setLoader] = React.useState(true);
-  const [fixtures, setfixtures] = React.useState([]);
+  const [loader, setLoader] = useState(true);
+  const [fixtures, setfixtures] = useState([]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     fetchFixtureById(id).then(res => {
-      console.log(res);
       setfixtures(res.data.api.fixtures[0]);
       setLoader(false);
     });

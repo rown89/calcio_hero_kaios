@@ -11,7 +11,6 @@
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-kaios-navigation": "^1.0.0",
     "react-keyboard-navigation": "0.0.3",
     "react-loader-spinner": "^3.1.5",
     "react-modal": "^3.11.1",

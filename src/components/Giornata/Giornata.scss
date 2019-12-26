@@ -26,6 +26,7 @@
     }
 
     .btnPickSeason {
+      width: 100px;
       padding: 10px;
       background: white;
       border: 0;
@@ -41,49 +42,6 @@
         color: $white;
         background: $primaryColor;
       }
-    }
-  }
-}
-
-.btnSeasonList {
-  display: grid;
-  width: 100%;
-  text-align: center;
-  align-items: center;
-  height: 60px;
-  margin: 0;
-  color: #323232;
-
-  &:focus {
-    color: $white;
-    background: $primaryColor;
-  }
-
-  &:hover {
-    cursor: pointer;
-    color: $white;
-    background: $primaryColor;
-  }
-}
-
-.btnContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-
-  .btnBack {
-    padding: 10px;
-    border: 0;
-    border-radius: 5px;
-    color: $white;
-    background: $midColor;
-    &:focus {
-      background: $primaryColor;
-    }
-    &:hover {
-      cursor: pointer;
-      background: $primaryColor;
     }
   }
 }
