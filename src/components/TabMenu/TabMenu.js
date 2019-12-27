@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Route, NavLink } from "react-router-dom";
 import { withFocus } from "react-keyboard-navigation";
 import "./TabMenu.scss";
 
 const sections = [
   {
-    name: "Squadre",
-    to: "/squadre"
+    name: "Classifica",
+    to: "/classifica"
   },
   {
     name: "Giornate",
@@ -19,8 +19,6 @@ const sections = [
 ];
 
 export const TabMenu = () => {
-  const [counter, SetCounter] = useState(0);
-  const [Loaded, SetLoaded] = useState(false);
 
   let Nav = item => {
     const { section } = item;

@@ -1,0 +1,33 @@
+@import '../../../Kaios_style.scss';
+
+.cardf {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  color: #323232;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 5px -4px rgba(0,0,0,0.11);
+  background: $greyScale;
+
+  .squadra {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    img {
+      width: 60px;
+      height: auto;
+      margin-right: 10px;
+    }
+  }
+
+  .punti {
+    display: flex;
+    flex-direction: row;
+  }
+}

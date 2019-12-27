@@ -7,7 +7,7 @@ import {
   fetchCurrentRoundForALeague,
   fetchFixturesByLeagueId
 } from "../../Controllers";
-import { Cards } from "..";
+import { GiornataCards } from "..";
 import "./Giornata.scss";
 import "../SeasonPicker/SeasonPicker.scss";
 export const Giornata = () => {
@@ -61,7 +61,7 @@ export const Giornata = () => {
         </div>
         <div position={2}>
           {Season.map((item, index) => {
-            return <Cards key={index} id={index} giornata={item} />;
+            return <GiornataCards key={index} id={index} giornata={item} />;
           })}
         </div>
       </div>

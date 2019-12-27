@@ -7,4 +7,53 @@
   padding: 10px;
   box-sizing: border-box;
   background: white;
+
+  .resume {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: baseline;
+    margin: 20px 0 20px 0;
+
+    .team {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #82C51A;
+      font-weight: bold;
+
+      .teamLogo {
+        width: auto;
+        height: 100px;
+      }
+
+      p {
+        word-break: break-all;
+        max-width: 130px;
+      }
+
+      .score {
+        margin: 10px 0 10px 0;
+        color: rgb(187, 187, 187);
+        font-size: x-large;
+      }
+    }
+  }
+
+  .status{
+    text-align: center;
+    color: rgb(187, 187, 187);
+
+    p {
+      margin: 0 0 5px 0;
+    }
+  }
+
+  .date {
+    text-align: center;
+    font-size: small;
+    margin-bottom: 10px;
+  }
 }

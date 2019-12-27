@@ -1,8 +1,9 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { fetchFixtureById } from "../../Controllers";
+import { parseISO } from "date-fns";
 import "./GiornataDetails.scss";
 
 export const GiornataDetails = () => {
@@ -17,8 +18,8 @@ export const GiornataDetails = () => {
     });
   }, []);
 
-  const lineup = () => {
-    if(fixtures.lineup){
+  const Lineup = () => {
+    if (fixtures.lineups) {
       return (
         <>
           <>{fixtures.lineups[0].coach || "-"}</>
@@ -31,7 +32,7 @@ export const GiornataDetails = () => {
         </>
       );
     }
-    return <div>dato non ancora disponibile</div>
+    return <div>dato non ancora disponibile</div>;
   };
 
   if (loader) {
@@ -43,19 +44,35 @@ export const GiornataDetails = () => {
   } else {
     return (
       <div className="giornataDetailMain">
-        <div className="dateAndStatus">
-          <p>{fixtures.event_date}</p>
-          <p>{fixtures.status}</p>
-        </div>
-        <div className="teamData">
-          <img className="teamLogo" src={fixtures.homeTeam.logo}></img>
-          <p>{fixtures.homeTeam.team_name}</p>
-          <div className="lineup">
-            <p>Formazione:</p>
-            {lineup()}
+        <div className="resume">
+          <div className="team">
+            <img className="teamLogo" src={fixtures.homeTeam.logo}></img>
+            <p>{fixtures.homeTeam.team_name.toUpperCase()}</p>
+            <div className="score">
+            {fixtures.goalsHomeTeam}
+            </div>
+          </div>
+          <div className="team">
+            <img className="teamLogo" src={fixtures.awayTeam.logo}></img>
+            <p>{fixtures.awayTeam.team_name.toUpperCase()}</p>
+            <div className="score">
+              {fixtures.goalsAwayTeam}
+            </div>
           </div>
         </div>
-        <p>{fixtures.awayTeam.team_name}</p>
+
+        <div className="status">
+          <p>{fixtures.status}</p>
+          <p>{fixtures.venue}</p>
+        </div>
+        <div className="date">
+          <p>{parseISO(fixtures.event_date).toString()}</p>
+        </div>
+
+        <div className="lineups">
+          <p>Formazione:</p>
+          
+        </div>
       </div>
     );
   }
