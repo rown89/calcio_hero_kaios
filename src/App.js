@@ -69,8 +69,8 @@ export default function App() {
           </div>
         </header>
         <TabMenu />
-        <Route exact path="/classifica" component={Classifica} />
         <Route exact path="/" component={Giornata} />
+        <Route exact path="/classifica" component={Classifica} />
         <Route exact path="/seasonPicker" component={SeasonPicker} />
         <Route exact path="/oggi" component={Oggi} />
         <Route exact path="/giornata-details/:id" component={GiornataDetails} />

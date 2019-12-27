@@ -29,7 +29,7 @@ export const SeasonPicker = () => {
           className="btnSeasonList"
           onClick={() => pickedSeason(season)}
         >
-          <h2>{"Giornata " + season.slice(-2)}</h2>
+          <div className="p.PRI">{"Giornata " + season.slice(-2)}</div>
         </button>
       );
     });

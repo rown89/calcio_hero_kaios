@@ -5,12 +5,12 @@ import "./TabMenu.scss";
 
 const sections = [
   {
-    name: "Classifica",
-    to: "/classifica"
-  },
-  {
     name: "Giornate",
     to: "/"
+  },
+  {
+    name: "Classifica",
+    to: "/classifica"
   },
   {
     name: "Oggi",
