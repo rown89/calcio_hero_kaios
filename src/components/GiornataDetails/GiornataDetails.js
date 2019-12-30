@@ -18,21 +18,29 @@ export const GiornataDetails = () => {
     });
   }, []);
 
-  const Lineup = () => {
-    if (fixtures.lineups) {
+  let StatGenerator = team => {
+    const { squadra } = team;
+    if (fixtures.statistics) {
+      var keySquadra = Object.keys(squadra);
       return (
         <>
-          <>{fixtures.lineups[0].coach || "-"}</>
-          <>{fixtures.lineups[0].formation || "-"}</>
-          <>
-            {fixtures.lineups[0].startXI.map(XI => {
-              return <div>{XI.player}</div>;
-            }) || "-"}
-          </>
+          <div className="statSection">STATISTICS</div>
+          {keySquadra.map((item, i) => {
+            return (
+              <div className="stats" key={i}>
+                <div className="stat">
+                  <p>{item}</p>
+                  <div className="data">
+                    <div>{squadra[item].home || "-"}</div>
+                    <div>{squadra[item].away || "-"}</div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </>
       );
-    }
-    return <div>dato non ancora disponibile</div>;
+    } else return <div className="stats">-</div>;
   };
 
   if (loader) {
@@ -44,35 +52,33 @@ export const GiornataDetails = () => {
   } else {
     return (
       <div className="giornataDetailMain">
-        <div className="resume">
-          <div className="team">
-            <img className="teamLogo" src={fixtures.homeTeam.logo}></img>
-            <p>{fixtures.homeTeam.team_name.toUpperCase()}</p>
-            <div className="score">
-            {fixtures.goalsHomeTeam}
-            </div>
-          </div>
-          <div className="team">
-            <img className="teamLogo" src={fixtures.awayTeam.logo}></img>
-            <p>{fixtures.awayTeam.team_name.toUpperCase()}</p>
-            <div className="score">
-              {fixtures.goalsAwayTeam}
-            </div>
-          </div>
-        </div>
-
         <div className="status">
           <p>{fixtures.status}</p>
-          <p>{fixtures.venue}</p>
+          <p style={{ fontSize: 11 }}>{fixtures.venue}</p>
+          <p
+            style={{
+              margin: "auto",
+              maxWidth: 200,
+              textAlign: "center",
+              fontSize: 10
+            }}
+          >
+            {parseISO(fixtures.event_date).toString()}
+          </p>
         </div>
-        <div className="date">
-          <p>{parseISO(fixtures.event_date).toString()}</p>
+        <div className="resume">
+          <div className="team">
+            <img className="teamLogo" src={fixtures.homeTeam.logo} alt=""/>
+            <p>{fixtures.homeTeam.team_name.toUpperCase()}</p>
+            <div className="score">{fixtures.goalsHomeTeam}</div>
+          </div>
+          <div className="team">
+            <img className="teamLogo" src={fixtures.awayTeam.logo} alt=""/>
+            <p>{fixtures.awayTeam.team_name.toUpperCase()}</p>
+            <div className="score">{fixtures.goalsAwayTeam}</div>
+          </div>
         </div>
-
-        <div className="lineups">
-          <p>Formazione:</p>
-          
-        </div>
+        <StatGenerator squadra={fixtures.statistics} />
       </div>
     );
   }

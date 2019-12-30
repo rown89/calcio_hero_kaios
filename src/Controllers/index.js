@@ -3,4 +3,6 @@ export * from './allSeasons';
 export * from './currentRoundForALeague';
 export * from './fixturesByLeagueId';
 export * from './fixtureById';
+export * from './teamById';
+export * from './teamStatistics';
 export * from './standings';

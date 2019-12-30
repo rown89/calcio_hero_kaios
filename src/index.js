@@ -1,11 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import './index.scss';
-import { NavigationProvider } from 'react-keyboard-navigation';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import "./index.scss";
+import { NavigationProvider } from "react-keyboard-navigation";
 
-ReactDOM.render(<NavigationProvider><App /></NavigationProvider>, document.getElementById('root'));
+ReactDOM.render(
+  <NavigationProvider>
+    <App />
+  </NavigationProvider>,
+  document.getElementById("root")
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

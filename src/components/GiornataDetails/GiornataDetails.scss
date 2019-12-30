@@ -13,7 +13,7 @@
     flex: 1;
     flex-direction: row;
     align-items: baseline;
-    margin: 20px 0 20px 0;
+    margin: 0 0 20px 0;
 
     .team {
       display: flex;
@@ -43,6 +43,7 @@
   }
 
   .status{
+    margin-bottom: 20px;
     text-align: center;
     color: rgb(187, 187, 187);
 
@@ -51,9 +52,49 @@
     }
   }
 
-  .date {
+  .statistics {
+    width: 100%;
+    margin: 20px 0 20px 0;
     text-align: center;
-    font-size: small;
+  
+    .statistic-title {
+      
+    }
+  }
+
+  .statSection {
+    text-align: center;
+    color: rgb(187, 187, 187);
     margin-bottom: 10px;
+  }
+}
+
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px 0 10px 0;
+  text-align: center;
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    &:focus {
+      background: $primaryColor;
+      color: $white;
+    }
+
+    .data {
+      display: flex;
+      justify-content: space-around;
+      flex: 1;
+      width: 100%;
+      text-align: center;
+      color: $primaryColor;
+    }
+    
   }
 }

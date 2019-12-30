@@ -55,7 +55,7 @@ export const Giornata = () => {
       <div className="giornateMain">
         <div className="pickedGiornata">
           <div className="giornata">
-            Giornata: <h2>{localStorage.currentSeason.slice(-2)}</h2>
+            Giornata: <h2>{localStorage.currentSeason.slice(-2).replace('_','')}</h2>
           </div>
           {<SeasonPickerBtn id="btnSeasonPicker" position={2} />}
         </div>

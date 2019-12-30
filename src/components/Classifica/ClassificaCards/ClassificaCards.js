@@ -1,37 +1,40 @@
-import React, { useCallback } from "react";
+import React from "react";
+import { useHistory } from "react-router-dom";
 import { withFocus } from "react-keyboard-navigation";
 import "./ClassificaCards.scss";
 
-export const ClassificaCards = (classifica) => {
+export const ClassificaCards = classifica => {
+  const history = useHistory();
   const squadre = classifica.classifica[0];
 
-  let Card = (stand) => {
+  let Card = squadra => {
+    const { data } = squadra;
     const CardFocus = withFocus(({ forwardedRef, ...props }) => {
       return (
-        <div
+        <button
           className="cardf"
           ref={forwardedRef}
           {...props}
-        > 
+          onClick={() => history.push("squadra/" + data.team_id)}
+        >
           <div className="squadra">
-            <img src={stand.stand.logo} alt="logo-squadra" />
-            <h2>{stand.stand.teamName}</h2>
+            <img src={data.logo} alt="logo-squadra" />
+            <h2>{data.teamName}</h2>
           </div>
           <div className="punti">
-            <h2>{stand.stand.points}</h2>p
+            <h2 className="p">{data.points}</h2>
+            <span>p</span>
           </div>
-        </div>
+        </button>
       );
     });
-    return <CardFocus id={stand.stand.teamName} position={1} />;
+    return <CardFocus id={data.teamName} position={1} />;
   };
 
   return (
     <>
       {squadre.map((item, i) => {
-        return (
-            <Card key={i} stand={item} />
-        );
+        return <Card key={i} data={item} />;
       })}
     </>
   );

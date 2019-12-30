@@ -19,7 +19,7 @@ export const SeasonPicker = () => {
     history.push("/");
   };
 
-  let Nav = item => {
+  let Nav = (item) => {
     const { season } = item;
     const SeasonsList = withFocus(({ forwardedRef, ...props }) => {
       return (
@@ -29,7 +29,7 @@ export const SeasonPicker = () => {
           className="btnSeasonList"
           onClick={() => pickedSeason(season)}
         >
-          <div className="p.PRI">{"Giornata " + season.slice(-2)}</div>
+          <div className="p.PRI">{"Giornata " + season.slice(-2).replace('_','')}</div>
         </button>
       );
     });

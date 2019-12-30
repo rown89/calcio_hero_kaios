@@ -1,0 +1,78 @@
+@import '../../Kaios_style.scss';
+
+.squadra {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  .clubInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 5px -4px rgba(0,0,0,0.11);
+    background: $white;
+
+    .logo {
+      width: 100px;
+      height: auto;
+      margin: 10px 0 10px 0;
+    }
+  }
+
+  .clubStat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px 10px 10px;
+    border-radius: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 5px -4px rgba(0,0,0,0.11);
+    background: $white;
+
+    .statTitle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0 0 0;
+
+      .statLogo {
+        width: 20px;
+        height: auto;
+        margin-right: 10px;
+      }
+    }
+
+    .btnStat {
+      width: 100%;
+      border: none;
+      margin: 0;
+      padding: 0;
+      border-radius: 10px;
+      background: $white;
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        margin-bottom: 10px;
+
+        .stat {
+          text-align: center;
+        } 
+      }
+      &:focus {
+        font-weight: bold;
+        color: $white;
+        background: $primaryColor;
+      }
+    }
+  }
+}
