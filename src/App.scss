@@ -30,10 +30,11 @@ header {
 }
 
 .title {
+  width: 100%;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  padding: 10px 0 10px 0;
+  justify-content: center;
+  padding: 5px 0 5px 0;
 
   .img {
     width: 20px;
@@ -47,14 +48,14 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 10px;
+  padding: 0 10px 0 10px;
   color: #323232;
   border-top: solid $midColor;
   background: $greyScale;
 
   .logo {
-    width: 30px;
-    height: 30px;
+    width: auto;
+    height: 25px;
   }
 }
 

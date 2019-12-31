@@ -3,7 +3,7 @@ import { withFocus } from "react-keyboard-navigation";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { fetchTeamStatistics } from "../../../Controllers";
-import "../Squadra.scss";
+import "../SquadraDetails.scss";
 
 export const StatisticheSquadra = (team_id, team_logo) => {
   const [loader, setLoader] = useState(true);

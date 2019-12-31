@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { fetchAllSeasons } from "../../Controllers";
+import { fetchAllSeasons } from "../../../Controllers";
 import { withFocus } from "react-keyboard-navigation";
 import "./SeasonPicker.scss";
 
@@ -29,7 +29,7 @@ export const SeasonPicker = () => {
           className="btnSeasonList"
           onClick={() => pickedSeason(season)}
         >
-          <div className="p.PRI">{"Giornata " + season.slice(-2).replace('_','')}</div>
+          <h2>{"Giornata " + season.slice(-2).replace('_','')}</h2>
         </button>
       );
     });
@@ -38,6 +38,9 @@ export const SeasonPicker = () => {
 
   return (
     <div className="seasonPickerContainer">
+      <div className="info">
+        Seleziona una giornata
+      </div>
       {AllSeason.map((item, i) => {
         return <Nav key={i} season={item} />;
       })}

@@ -9,7 +9,7 @@ import {
 } from "../../Controllers";
 import { GiornataCards } from "..";
 import "./Giornata.scss";
-import "../SeasonPicker/SeasonPicker.scss";
+import "./SeasonPicker/SeasonPicker.scss";
 export const Giornata = () => {
   const history = useHistory();
   const [Loading, setLoading] = useState(true);

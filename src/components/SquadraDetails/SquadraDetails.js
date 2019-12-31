@@ -4,9 +4,9 @@ import { useParams } from "react-router-dom";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { fetchTeamById } from "../../Controllers";
-import "./Squadra.scss";
+import "./SquadraDetails.scss";
 
-export const Squadra = () => {
+export const SquadraDetails = () => {
   let { id } = useParams();
   const [Team, SetTeam] = useState([]);
   const [Statistics, SetStatistics] = useState([]);
@@ -27,11 +27,10 @@ export const Squadra = () => {
     );
   } else {
     return (
-      <div className="squadra">
+      <div id="squadra">
         <div className="clubInfo">
           <img className="logo" src={Team.logo} />
           <h2>{Team.name}</h2>
-          <p style={{ color: "#bbbbbb", fontSize: 14 }}>{Team.venue_name}</p>
         </div>
         <StatisticheSquadra squadra={Team.team_id} logo={Team.logo} />
       </div>

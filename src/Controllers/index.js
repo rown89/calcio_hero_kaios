@@ -6,3 +6,4 @@ export * from './fixtureById';
 export * from './teamById';
 export * from './teamStatistics';
 export * from './standings';
+export * from './topPlayers';

@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import { HashRouter, Route } from "react-router-dom";
 import {
   TabMenu,
-  Oggi,
+  Giocatori,
   Giornata,
   SeasonPicker,
   GiornataDetails,
-  Classifica,
-  Squadra,
+  ClassificaSquadre,
+  SquadraDetails,
   Softkey
 } from "./Components";
 import Loader from "react-loader-spinner";
@@ -71,10 +71,10 @@ export default function App() {
         </header>
         <TabMenu />
         <Route exact path="/" component={Giornata} />
-        <Route exact path="/classifica" component={Classifica} />
-        <Route exact path="/squadra/:id" component={Squadra} />
+        <Route exact path="/classificaSquadre" component={ClassificaSquadre} />
+        <Route exact path="/squadra-details/:id" component={SquadraDetails} />
         <Route exact path="/seasonPicker" component={SeasonPicker} />
-        <Route exact path="/oggi" component={Oggi} />
+        <Route exact path="/giocatori" component={Giocatori} />
         <Route exact path="/giornata-details/:id" component={GiornataDetails} />
         <Softkey center={"Insert"} />
       </HashRouter>

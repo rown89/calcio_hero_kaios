@@ -1,10 +1,11 @@
-@import '../../Kaios_style.scss';
+@import '../../../Kaios_style.scss';
 
 .giornataDetailMain {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
   box-sizing: border-box;
   background: white;
 
@@ -42,8 +43,8 @@
     }
   }
 
-  .status{
-    margin-bottom: 20px;
+  .status {
+    margin: 20px 0 20px 0;
     text-align: center;
     color: rgb(187, 187, 187);
 
@@ -65,7 +66,6 @@
   .statSection {
     text-align: center;
     color: rgb(187, 187, 187);
-    margin-bottom: 10px;
   }
 }
 

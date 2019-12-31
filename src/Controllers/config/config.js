@@ -19,6 +19,10 @@ export const api = {
     "https://api-football-v1.p.rapidapi.com/v2/teams/team/", //{team_id}
   URL_TEAM_STATISTICS:
     "https://api-football-v1.p.rapidapi.com/v2/statistics/", //{league_id} + {team_id}
+  URL_LINEUPS:
+    "https://api-football-v1.p.rapidapi.com/v2/lineups/", //{fixture_id}
+  URL_TOPSCORERS:
+    "https://api-football-v1.p.rapidapi.com/v2/topscorers/", //{{league_id}}
   SERIE_A:
     891,
   TIMEZONE:

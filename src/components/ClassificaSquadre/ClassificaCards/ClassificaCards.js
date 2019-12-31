@@ -15,7 +15,7 @@ export const ClassificaCards = classifica => {
           className="cardf"
           ref={forwardedRef}
           {...props}
-          onClick={() => history.push("squadra/" + data.team_id)}
+          onClick={() => history.push("squadra-details/" + data.team_id)}
         >
           <div className="squadra">
             <img src={data.logo} alt="logo-squadra" />
@@ -23,7 +23,6 @@ export const ClassificaCards = classifica => {
           </div>
           <div className="punti">
             <h2 className="p">{data.points}</h2>
-            <span>p</span>
           </div>
         </button>
       );

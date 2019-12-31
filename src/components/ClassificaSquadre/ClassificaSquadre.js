@@ -3,9 +3,9 @@ import { ClassificaCards } from "..";
 import { fetchStandings } from "../../Controllers";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import "./Classifica.scss";
+import "./ClassificaSquadre.scss";
 
-export const Classifica = () => {
+export const ClassificaSquadre = () => {
   let [Loading, setLoading] = useState(true);
   let [Squadre, SetSquadre] = useState([]);
   

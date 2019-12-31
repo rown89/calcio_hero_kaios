@@ -1,0 +1,44 @@
+@import '../../Kaios_style.scss';
+
+.Giocatori {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  .giocatore {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background: $white;
+    box-shadow: 0px 5px 5px -4px rgba(0,0,0,0.11);
+    &:focus {
+      color: $white;
+      background: $primaryColor;
+    }
+
+    .mainInfo {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 2;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .name {
+        &:focus {
+          color: $white;
+          background: $primaryColor;
+        }
+      }
+
+      .squadra {
+
+      }
+    }
+  }
+}

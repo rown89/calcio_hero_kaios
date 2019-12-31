@@ -10,11 +10,11 @@ const sections = [
   },
   {
     name: "Classifica",
-    to: "/classifica"
+    to: "/classificaSquadre"
   },
   {
-    name: "Oggi",
-    to: "/oggi"
+    name: "Top Giocatori",
+    to: "/giocatori"
   }
 ];
 

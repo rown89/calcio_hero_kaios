@@ -35,10 +35,10 @@ export const Softkey = ({
   };
 
   return (
-    <div className={css.softkey}>
-      <label className={css.left}>{left}</label>
-      <label className={css.center}>{center}</label>
-      <label className={css.right}>{right}</label>
+    <div className="softkey">
+      <label className="left">Back</label>
+      <label className="enter"><b>ENTER</b></label>
+      <label className="right">Right</label>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import { fetchFixtureById } from "../../Controllers";
+import { fetchFixtureById } from "../../../Controllers";
 import { parseISO } from "date-fns";
 import "./GiornataDetails.scss";
 
@@ -18,7 +18,7 @@ export const GiornataDetails = () => {
     });
   }, []);
 
-  let StatGenerator = team => {
+  let Statistics = team => {
     const { squadra } = team;
     if (fixtures.statistics) {
       var keySquadra = Object.keys(squadra);
@@ -41,6 +41,12 @@ export const GiornataDetails = () => {
         </>
       );
     } else return <div className="stats">-</div>;
+  };
+
+  let Events = team => {
+    return(
+      <>Events</>
+    )
   };
 
   if (loader) {
@@ -78,7 +84,8 @@ export const GiornataDetails = () => {
             <div className="score">{fixtures.goalsAwayTeam}</div>
           </div>
         </div>
-        <StatGenerator squadra={fixtures.statistics} />
+        <Statistics squadra={fixtures.statistics} />
+        <Events />
       </div>
     );
   }
