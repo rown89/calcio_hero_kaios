@@ -16,7 +16,7 @@ export const SquadraDetails = () => {
       SetTeam(res.data.api.teams[0]);
       setLoader(false);
     });
-  }, [id]) 
+  }, [id]);
 
   useEffect(() => {
     fetch();
