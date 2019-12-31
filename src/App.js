@@ -12,19 +12,20 @@ import {
 } from "./Components";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import { fetchLeagueByYear } from "./Controllers";
+//import { fetchLeagueByYear } from "./Controllers";
 import "./App.scss";
 
 export default function App() {
   const [Loading, setLoading] = useState(true);
-  const [League, setLeague] = useState([]);
+  //const [League, setLeague] = useState([]);
 
   useEffect(() => {
     if (navigator.onLine) {
-      fetchLeagueByYear().then(res => {
+      /*fetchLeagueByYear().then(res => {
         setLeague(res.data.api.leagues[0]);
         setLoading(false);
-      });
+      });*/
+      setLoading(false);
     }
   }, []);
 
@@ -59,7 +60,7 @@ export default function App() {
             />
             <h5>CALCIO HERO</h5>
           </div>
-          <div className="league">
+          {/*<div className="league">
             <img
               alt="logo-league"
               className="logo"
@@ -67,7 +68,7 @@ export default function App() {
             ></img>
             <div className="p.PRI">{League.name}</div>
             <div className="p.SEC">{League.season}</div>
-          </div>
+          </div>*/}
         </header>
         <TabMenu />
         <Route exact path="/" component={Giornata} />

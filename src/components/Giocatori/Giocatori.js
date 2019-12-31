@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { HashRouter, Route } from "react-router-dom";
 import { fetcTopPlayers } from "../../Controllers";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";

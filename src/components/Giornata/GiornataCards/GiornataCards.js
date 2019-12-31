@@ -1,4 +1,5 @@
 import React, { useCallback } from "react";
+import PropTypes from "prop-types";
 import { withFocus } from "react-keyboard-navigation";
 import { useHistory } from "react-router-dom";
 import "./GiornataCards.scss";
@@ -10,7 +11,7 @@ export const GiornataCards = ({ giornata, id }) => {
     fixture_id => {
       history.push("/giornata-details/" + fixture_id);
     },
-    [giornata]
+    [history]
   );
 
   const CardsWithFocus = withFocus(({ forwardedRef, ...props }) => {
@@ -41,4 +42,10 @@ export const GiornataCards = ({ giornata, id }) => {
   });
 
   return <CardsWithFocus id={"card-giornata" + id} />;
+  
+};
+
+GiornataCards.propTypes = {
+  giornata: PropTypes.object,
+  id: PropTypes.node
 };

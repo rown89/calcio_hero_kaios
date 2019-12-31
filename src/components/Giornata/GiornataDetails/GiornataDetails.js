@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
@@ -11,12 +11,16 @@ export const GiornataDetails = () => {
   const [loader, setLoader] = useState(true);
   const [fixtures, setfixtures] = useState([]);
 
-  useEffect(() => {
-    fetchFixtureById(id).then(res => {
+  const fetch = useCallback(() => {
+      fetchFixtureById(id).then(res => {
       setfixtures(res.data.api.fixtures[0]);
       setLoader(false);
     });
-  }, []);
+  }, [id]) 
+
+  useEffect(() => {
+    fetch();
+  }, [fetch]);
 
   let Statistics = team => {
     const { squadra } = team;

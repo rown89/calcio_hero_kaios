@@ -26,8 +26,8 @@
       font-weight: bold;
 
       .teamLogo {
-        width: auto;
-        height: 100px;
+        width: 40px;
+        height: auto;
       }
 
       p {
@@ -36,7 +36,6 @@
       }
 
       .score {
-        margin: 10px 0 10px 0;
         color: rgb(187, 187, 187);
         font-size: x-large;
       }
@@ -44,7 +43,7 @@
   }
 
   .status {
-    margin: 20px 0 20px 0;
+    margin: 10px 0 10px 0;
     text-align: center;
     color: rgb(187, 187, 187);
 

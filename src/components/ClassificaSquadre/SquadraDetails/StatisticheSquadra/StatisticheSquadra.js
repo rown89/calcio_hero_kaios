@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { withFocus } from "react-keyboard-navigation";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import { fetchTeamStatistics } from "../../../Controllers";
+import { fetchTeamStatistics } from "../../../../Controllers";
 import "../SquadraDetails.scss";
 
 export const StatisticheSquadra = (team_id, team_logo) => {
@@ -11,12 +11,16 @@ export const StatisticheSquadra = (team_id, team_logo) => {
   const {squadra} = team_id;
   const {logo} = team_logo;
 
-  useEffect(() => {
+  const fetch = useCallback(() => {
     fetchTeamStatistics(squadra).then(res => {
       SetStatistics(res.data.api.statistics);
       setLoader(false);
     });
-  }, []);
+  }, [squadra]);
+
+  useEffect(() => {
+    fetch();
+  }, [fetch]);
   
   const MatchsPlayed = data => {
     const {title, stat, id} = data
