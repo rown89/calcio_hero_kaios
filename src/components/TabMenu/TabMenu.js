@@ -13,7 +13,7 @@ const sections = [
     to: "/classificaSquadre"
   },
   {
-    name: "Top Giocatori",
+    name: "Top Players",
     to: "/giocatori"
   }
 ];

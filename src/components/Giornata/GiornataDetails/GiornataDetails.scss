@@ -62,7 +62,6 @@
   .giornataDetailTabs {
     
     button {
-      padding: 0 10px 0 10px;
       height: 30px;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
@@ -107,7 +106,7 @@
     padding: 10px;
     margin: 5px 10px 5px 10px;
     box-shadow: 0px 5px 5px -4px rgba(0, 0, 0, 0.11);
-    background: aliceblue;
+    background: $staticHighlights;
     &:focus {
       color: $white;
       background: $primaryColor;
@@ -135,6 +134,37 @@
       }
     }
   }
+
+  .lineups {
+    padding: 10px;
+    margin-top: 5px;
+    background: $staticHighlights;
+
+    .lineupsLogoName{
+      display: flex;
+      flex-direction: column;
+      padding: 0 0 10px 0;
+
+      .lineupMainInfos {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 25px;
+          height: auto;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .lineupSquadra {
+      display: flex;
+
+      .playerNumber {
+        width: 25px;
+      }
+    }
+  }
 }
 
 
@@ -146,7 +176,7 @@
     border-radius: 10px;
     box-sizing: border-box;
     box-shadow: 0px 5px 5px -4px rgba(0, 0, 0, 0.11);
-    background: aliceblue;
+    background: $staticHighlights;
 
   .stat {
     display: flex;

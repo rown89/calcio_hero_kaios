@@ -5,11 +5,10 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { fetchTeamStatistics } from "../../../../Controllers";
 import "../SquadraDetails.scss";
 
-export const StatisticheSquadra = (team_id, team_logo) => {
+export const StatisticheSquadra = (team_id) => {
   const [loader, setLoader] = useState(true);
   const [Statistics, SetStatistics] = useState([]);
   const {squadra} = team_id;
-  const {logo} = team_logo;
 
   const fetch = useCallback(() => {
     fetchTeamStatistics(squadra).then(res => {
