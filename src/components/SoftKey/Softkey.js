@@ -7,7 +7,7 @@ export const Softkey = () => {
     <div className="softkey">
       <label className="left">Back</label>
       <label className="enter"><b>ENTER</b></label>
-      <label className="right">Right</label>
+      <label className="right">{'>'}</label>
     </div>
   );
 };

@@ -18,7 +18,9 @@
     color: #323232;
     text-decoration: none;
     &:focus {
-      background: $greyScale;
+      font-weight: bold;
+      color: $white;
+      background: $primaryColor;
     }
     &:hover {
       border-bottom: 4px solid $primaryColor;

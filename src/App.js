@@ -52,7 +52,7 @@ export default function App() {
     return (
       <HashRouter>
         <header>
-          <div className="title">
+          {/*<div className="title">
             <img
               className="img"
               alt="logo"
@@ -60,7 +60,7 @@ export default function App() {
             />
             <h5>CALCIO HERO</h5>
           </div>
-          {/*<div className="league">
+          <div className="league">
             <img
               alt="logo-league"
               className="logo"

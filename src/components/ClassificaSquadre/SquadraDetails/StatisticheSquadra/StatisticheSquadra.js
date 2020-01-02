@@ -26,25 +26,23 @@ export const StatisticheSquadra = (team_id, team_logo) => {
     const {title, stat, id} = data
     const CardsWithFocus = withFocus(({ forwardedRef, ...props }) => {
       return(
-        <div className="clubStat" ref={forwardedRef} {...props}>
-          <button className="btnStat">
-            <p>{title}</p>
-            <div className="container">
-              <div className="stat">
-                <div>totali</div>
-                <h2>{stat.total}</h2>
-              </div>
-              <div className="stat">
-                <div>casa</div>
-                <h2>{stat.home}</h2>
-              </div>
-              <div className="stat">
-                <div>trasferte</div>
-                <h2>{stat.away}</h2>
-              </div>
+        <button className="btnStat" ref={forwardedRef} {...props}>
+          <p>{title}</p>
+          <div className="container">
+            <div className="stat">
+              <div>totali</div>
+              <h2>{stat.total}</h2>
             </div>
-          </button>
-        </div>
+            <div className="stat">
+              <div>casa</div>
+              <h2>{stat.home}</h2>
+            </div>
+            <div className="stat">
+              <div>trasferte</div>
+              <h2>{stat.away}</h2>
+            </div>
+          </div>
+        </button>
       );
     });
 

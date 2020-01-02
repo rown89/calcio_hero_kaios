@@ -12,7 +12,12 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding: 0 0 0 10px;
     margin: 0 0 10px 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: white;
+    background: #323232;
 
     .giornata {
       display: flex;
@@ -27,12 +32,14 @@
 
     .btnPickSeason {
       width: 100px;
-      padding: 5px 10px 5px 10px;
-      background: white;
+      height: 30px;
+      padding: 0 0 0 15px;
       border: 0;
       border-radius: 5px;
       color: $basicText;
-      box-shadow: 0px 5px 5px -4px rgba(0,0,0,0.11);
+      clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 7% 50%);
+      color: white;
+      background: #323232;
       &:focus {
         color: $white;
         background: $primaryColor;

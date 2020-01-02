@@ -11,6 +11,10 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 #root {
   min-height: 100%;
   margin-bottom: 30px;

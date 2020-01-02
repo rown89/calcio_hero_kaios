@@ -10,6 +10,7 @@ import {
 import { GiornataCards } from "..";
 import "./Giornata.scss";
 import "./SeasonPicker/SeasonPicker.scss";
+
 export const Giornata = () => {
   const history = useHistory();
   const [Loading, setLoading] = useState(true);
@@ -39,7 +40,7 @@ export const Giornata = () => {
         {...props}
         onClick={() => history.push("/seasonPicker")}
       >
-        <h2 className="p.PRI">Cambia</h2>
+        <span>Cambia</span>
       </button>
     );
   });

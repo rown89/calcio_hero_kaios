@@ -1,39 +1,64 @@
-@import '../../../Kaios_style.scss';
+@import "../../../Kaios_style.scss";
+
+.clubInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  color: $white;
+  background: $basicText;
+  box-shadow: 0px 5px 5px -4px rgba(0, 0, 0, 0.11);
+
+  &:focus {
+    font-weight: bold;
+    color: $white;
+    background: $primaryColor;
+  }
+
+  .logo {
+    width: 25px;
+    height: auto;
+    margin: 10px;
+  }
+}
 
 #squadra {
   display: flex;
   flex-direction: column;
+  margin: 10px;
   box-sizing: border-box;
 
-  .clubInfo {
+  .statTitle {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    color: $white;
-    background: $basicText;
-    box-shadow: 0px 5px 5px -4px rgba(0,0,0,0.11);
+    align-items: center;
+    margin: 10px 0 0 0;
 
-    .logo {
-      width: 25px;
+    .statLogo {
+      width: 20px;
       height: auto;
-      margin: 10px;
+      margin-right: 10px;
     }
   }
 
-  .clubStat {
+  .btnStat {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
     margin-bottom: 10px;
     padding: 0;
+    border: none;
+    border-radius: 10px;
     box-sizing: border-box;
-    box-shadow: 0px 5px 5px -4px rgba(0,0,0,0.11);
+    box-shadow: 0px 5px 5px -4px rgba(0, 0, 0, 0.11);
     background: $white;
+
+    p {
+      text-align: left;
+    }
 
     .statTitle {
       display: flex;
@@ -48,36 +73,19 @@
       }
     }
 
-    .btnStat {
+    .container {
+      display: flex;
       width: 100%;
-      border: none;
-      margin: 0;
-      padding: 0;
-      border-radius: 10px;
-      background: $white;
+      margin-bottom: 10px;
 
-      p {
-        text-align: left;
-        margin-left: 35px;
-        color: #929292;
+      .stat {
+        margin: 0 15px 0 15px;
+        text-align: center;
       }
-
-      .container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 100%;
-        margin-bottom: 10px;
-
-        .stat {
-          text-align: center;
-        } 
-      }
-      &:focus {
-        font-weight: bold;
-        color: $white;
-        background: $primaryColor;
-      }
+    }
+    &:focus {
+      color: white;
+      background: $primaryColor;
     }
   }
 }

@@ -30,13 +30,16 @@ export const SquadraDetails = () => {
     );
   } else {
     return (
-      <div id="squadra">
-        <div className="clubInfo">
+      <>
+      <div className="clubInfo">
           <img className="logo" src={Team.logo} alt="team-logo" />
           <h2>{Team.name}</h2>
         </div>
+      <div id="squadra">
+        
         <StatisticheSquadra squadra={Team.team_id} logo={Team.logo} />
       </div>
+      </>
     );
   }
 };
