@@ -51,25 +51,6 @@ export default function App() {
   } else {
     return (
       <HashRouter>
-        <header>
-          {/*<div className="title">
-            <img
-              className="img"
-              alt="logo"
-              src={"https://image.flaticon.com/icons/png/512/123/123443.png"}
-            />
-            <h5>CALCIO HERO</h5>
-          </div>
-          <div className="league">
-            <img
-              alt="logo-league"
-              className="logo"
-              src={League.logo || ""}
-            ></img>
-            <div className="p.PRI">{League.name}</div>
-            <div className="p.SEC">{League.season}</div>
-          </div>*/}
-        </header>
         <TabMenu />
         <Route exact path="/" component={Giornata} />
         <Route exact path="/classificaSquadre" component={ClassificaSquadre} />
